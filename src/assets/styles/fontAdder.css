@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'pfdintextcondpro-regular';
+    src: url('fonts/pfdintextcondpro-regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pfdintextcondpro-medium';
+    src: url('fonts/pfdintextcondpro-medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

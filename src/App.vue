@@ -1,31 +1,32 @@
 <template>
   <div id="app">
-    <Hexaland></Hexaland>
-
+    <mainPage />
   </div>
 </template>
 
 <script>
-import Hexaland from "./components/Hexaland";
+import mainPage from "./components/mainPage";
+
+import('./assets/styles/fontAdder.css')
 import('./assets/styles/main.css')
+import('./assets/styles/hexagonStyle.css')
+import('./assets/styles/topMenuStyle.css')
+
 
 export default {
   name: 'App',
   components: {
-    Hexaland,
+    mainPage
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'pfdintextpro-medium', Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'pfdintextcondpro-medium', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #000312;
-  background: red;
-          height: 100%;
-  /*margin-top: 60px;*/
+   height: 100%;
+  font-stretch: condensed;
 }
 </style>

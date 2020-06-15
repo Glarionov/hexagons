@@ -1,0 +1,121 @@
+@import 'scssHelpers.scss';
+
+@mixin topMenuHoverTransition() {
+  transition: all .2s linear;
+}
+
+$minFont: 18;
+$maxFont: 20;
+
+$linkHoverColor: #af8ebf;
+
+.top-menu-main {
+  color: #C8CDD3;
+  font-family: 'pfdintextcondpro-regular', Avenir, Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100px;
+  @include makeParamGrowingFromMinTosMax(margin-top, 25, 31);
+  font-size: 20px;
+
+  margin: 0;
+
+  z-index: 10;
+  position: relative;
+
+  > div {
+    position: absolute;
+  }
+
+  .menu-item {
+    cursor: pointer;
+
+    &:hover {
+      @include topMenuHoverTransition;
+      color: $linkHoverColor;
+      font-weight: bold;
+      fill: $linkHoverColor;
+    }
+  }
+
+  .login-pic {
+    @include makeParamGrowingFromMinTosMax(height, $minFont, $maxFont);
+  }
+
+
+  .menu-item:hover svg {
+    @include topMenuHoverTransition;
+    fill: $linkHoverColor;
+    stroke: $linkHoverColor;
+    stroke-width: 2;
+  }
+
+  .menu-item a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .site-rules {
+    @include centre('x');
+  }
+
+  .tickets-menu-item {
+    margin-left: 5%;
+  }
+
+  $firstOffsetFromCenter: 60vw;
+
+  .how-to-buy {
+    right: $firstOffsetFromCenter;
+  }
+
+  .ticket-return {
+    left: $firstOffsetFromCenter;
+  }
+
+  .menu-item-login {
+    float: right;
+    @include makeParamGrowingFromMinTosMax(right, 50, 120);
+  }
+
+  .menu-item-more {
+    margin-top: 3px;
+    float: right;
+    right: 40px;
+  }
+
+  .top-icon-wrapper {
+    margin-top: 3px;
+    position: absolute;
+    left: -27px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .menu-item-central {
+      margin-top: 60px;
+    }
+
+    $firstOffsetFromCenter: 65vw;
+
+    .how-to-buy {
+      right: $firstOffsetFromCenter;
+    }
+
+    .ticket-return {
+      left: $firstOffsetFromCenter;
+    }
+
+    $marginOnSmallScreens: 10px;
+
+    .tickets-menu-item {
+      left: $marginOnSmallScreens;
+      right: auto;
+    }
+
+    .menu-item-more {
+      float: right;
+      right: $marginOnSmallScreens;
+    }
+
+  }
+}
+

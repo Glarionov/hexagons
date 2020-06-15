@@ -1,0 +1,99 @@
+@import 'scssHelpers.scss';
+
+$sidePartSharpCornerBorderRadius: 7%;
+$sidePartBluntCornerBorderRadius: 2%;
+
+.right-side-part-before {
+  background: white;
+  border-top-left-radius: $sidePartBluntCornerBorderRadius;
+  border-bottom-left-radius: $sidePartSharpCornerBorderRadius;
+}
+
+.left-side-part-after {
+  position: absolute;
+  overflow: hidden;
+  border-top-right-radius: $sidePartSharpCornerBorderRadius;
+  border-bottom-right-radius: $sidePartBluntCornerBorderRadius;
+}
+
+.team-name-span {
+  @include makeParamGrowingFromMinTosMax(font-size, 16, 41);
+}
+
+
+    html, body {
+        height: 100%;
+        margin: 0px;
+    }
+
+    body {
+    }
+
+    .hexaland-main {
+        height: 100%;
+        /*background: radial-gradient(circle at center, white -32%, #181E3E, #000000);*/
+        background: radial-gradient(circle at center, #4D5083 25%, #181E3E 50%, #000002 80%);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .side-part {
+        background: red;
+        position: absolute;
+    }
+
+    .left-side-part::after {
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        width: 100px;
+        height: 100px;
+        background: blue;
+    }
+
+
+    .right-side-part-before, .left-side-part-after {
+        transform: skew(-30deg, 0deg);
+    }
+
+
+    .side-part-triangle-inside, .side-part, .hex, side-part-triangle-inside, .left-side-part-after {
+        background: white;
+        position: absolute;
+
+        z-index: 6;
+        /*border-bottom-right-radius: 22px;*/
+    }
+
+    .triangle-helper {
+        position: absolute;
+    }
+
+    .left-side-part {
+        z-index: 40;
+    }
+
+
+    .team-name-span-wrapper {
+        display: table;
+        height: 100px;
+        width: 100%;
+        height: 100%;
+        /*text-align: center;*/
+    }
+
+    .team-name-span {
+        display: table-cell;
+        vertical-align: middle;
+        horiz-align: right;
+
+        /*font-size: 30px;*/
+    }
+
+    .left-side-part .team-name-span {
+        text-align: right;
+    }
+
+    .right-side-part .team-name-span {
+        text-align: left;
+    }
