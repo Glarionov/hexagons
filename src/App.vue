@@ -8,9 +8,9 @@
 import mainPage from "./components/mainPage";
 
 import('./assets/styles/fontAdder.css')
-import('./assets/styles/main.css')
-import('./assets/styles/hexagonStyle.css')
-import('./assets/styles/topMenuStyle.css')
+import('./assets/styles/main.scss')
+import('./assets/styles/hexagonStyle.scss')
+import('./assets/styles/topMenuStyle.scss')
 
 
 export default {
